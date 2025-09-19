@@ -40,9 +40,9 @@ export function Footer() {
               Επικοινωνία
             </h4>
             <div className="space-y-1 text-gray-300 text-sm">
-              <span>📞 6980703882</span>
-              <span>✉️ info@trenovations.gr</span>
-              <span>📍 Αθήνα</span>
+              <div>📞 6980703882</div>
+              <div>✉️ info@trenovations.gr</div>
+              <div>📍 Αθήνα</div>
             </div>
           </div>
         </div>

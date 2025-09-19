@@ -63,23 +63,12 @@ export function Testimonial() {
               </p>
               
               {/* Professional Author */}
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full overflow-hidden">
-                  <Image
-                    width={40}
-                    height={40}
-                    alt={testimonial.name}
-                    src={testimonial.avatar}
-                    className="w-full h-full object-cover"
-                  />
+              <div>
+                <div className="font-semibold text-white text-sm">
+                  {testimonial.name}
                 </div>
-                <div>
-                  <span className="font-semibold text-white text-sm">
-                    {testimonial.name}
-                  </span>
-                  <span className="text-gray-300 text-xs">
-                    Ευχαριστιμένος Πελάτης
-                  </span>
+                <div className="text-gray-300 text-xs">
+                  Ευχαριστιμένος Πελάτης
                 </div>
               </div>
             </div>

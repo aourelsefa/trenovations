@@ -4,15 +4,25 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon, ClockIcon } from "@heroicons/react
 
 export function ContactForm() {
   return (
-    <section id="contact" className="section-spacing bg-[#fefdf2]">
-      <div className="container mx-auto container-spacing">
+    <section id="contact" className="relative py-12 lg:py-16 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="https://trenovations.gr/wp-content/uploads/2025/09/design-2.png"
+          alt="Contact Background"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4 lg:px-8 py-8">
         {/* Professional Header */}
         <div className="text-center mb-12">
-          <h1 className="text-3xl lg:text-4xl font-semibold text-[#001f3f] mb-4 leading-tight">
+          <h1 className="text-3xl lg:text-4xl font-semibold text-white mb-4 leading-tight">
             Επικοινωνήστε μαζί μας
           </h1>
           
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed">
             Μη διστάσετε να επικοινωνήσετε μαζί μας μέσω της φόρμας επικοινωνίας
             και ας ξεκινήσουμε ένα ταξίδι καινοτομίας και επιτυχίας.
           </p>
@@ -31,45 +41,45 @@ export function ContactForm() {
               </p>
               
               <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="professional-icon">
-                    <PhoneIcon className="w-5 h-5 text-white" />
+                  <div className="flex items-center gap-3">
+                    <div className="professional-icon">
+                      <PhoneIcon className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <span className="font-semibold text-sm">Τηλέφωνο</span><br />
+                      <span className="text-gray-200 text-sm">6980703882</span>
+                    </div>
                   </div>
-                  <div>
-                    <span className="font-semibold text-sm">Τηλέφωνο</span>
-                    <span className="text-gray-200 text-sm">6980703882</span>
+
+                  <div className="flex items-center gap-3">
+                    <div className="professional-icon">
+                      <EnvelopeIcon className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <span className="font-semibold text-sm">Email</span><br />
+                      <span className="text-gray-200 text-sm">info@trenovations.gr</span>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <div className="professional-icon">
-                    <EnvelopeIcon className="w-5 h-5 text-white" />
+
+                  <div className="flex items-center gap-3">
+                    <div className="professional-icon">
+                      <MapPinIcon className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <span className="font-semibold text-sm">Τοποθεσία</span><br />
+                      <span className="text-gray-200 text-sm">Αθήνα</span>
+                    </div>
                   </div>
-                  <div>
-                    <span className="font-semibold text-sm">Email</span>
-                    <span className="text-gray-200 text-sm">info@trenovations.gr</span>
+
+                  <div className="flex items-center gap-3">
+                    <div className="professional-icon">
+                      <ClockIcon className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <span className="font-semibold text-sm">Ώρες Λειτουργίας</span><br />
+                      <span className="text-gray-200 text-sm">Δευτέρα - Παρασκευή: 8:00 - 18:00</span>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <div className="professional-icon">
-                    <MapPinIcon className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <span className="font-semibold text-sm">Τοποθεσία</span>
-                    <span className="text-gray-200 text-sm">Αθήνα</span>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <div className="professional-icon">
-                    <ClockIcon className="w-5 h-5 text-white" />
-                  </div>
-                  <div>
-                    <span className="font-semibold text-sm">Ώρες Λειτουργίας</span>
-                    <span className="text-gray-200 text-sm">Δευτέρα - Παρασκευή: 8:00 - 18:00</span>
-                  </div>
-                </div>
               </div>
               
               {/* Professional Social Media */}
@@ -91,7 +101,7 @@ export function ContactForm() {
           </div>
 
           {/* Professional Contact Form */}
-          <div className="professional-card p-6">
+          <div className="bg-white/95 backdrop-blur-sm p-6 rounded-lg shadow-lg">
             <h2 className="font-semibold text-[#001f3f] mb-4 text-xl">
               Στείλτε μας μήνυμα
             </h2>
