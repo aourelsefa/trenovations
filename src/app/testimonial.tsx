@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { Typography } from "@material-tailwind/react";
 import { StarIcon } from "@heroicons/react/24/solid";
 
 export function Testimonial() {
@@ -35,19 +34,13 @@ export function Testimonial() {
       <div className="container mx-auto container-spacing">
         {/* Professional Header */}
         <div className="text-center mb-12">
-          <Typography 
-            variant="h1" 
-            className="text-3xl lg:text-4xl font-semibold text-white mb-4 leading-tight"
-          >
+          <h1 className="text-3xl lg:text-4xl font-semibold text-white mb-4 leading-tight">
             Τι λένε οι πελάτες μας
-          </Typography>
+          </h1>
           
-          <Typography
-            variant="lead"
-            className="text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed"
-          >
+          <p className="text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed">
             Πάνω από 600+ ευχαριστιμένους πελάτες μας μιλούν για την εμπειρία τους.
-          </Typography>
+          </p>
         </div>
 
         {/* Professional Testimonials Grid */}
@@ -65,9 +58,9 @@ export function Testimonial() {
               </div>
               
               {/* Professional Testimonial Text */}
-              <Typography className="text-gray-100 leading-relaxed mb-4 text-sm">
+              <p className="text-gray-100 leading-relaxed mb-4 text-sm">
                 &ldquo;{testimonial.text}&rdquo;
-              </Typography>
+              </p>
               
               {/* Professional Author */}
               <div className="flex items-center gap-3">
@@ -81,12 +74,12 @@ export function Testimonial() {
                   />
                 </div>
                 <div>
-                  <Typography className="font-semibold text-white text-sm">
+                  <span className="font-semibold text-white text-sm">
                     {testimonial.name}
-                  </Typography>
-                  <Typography className="text-gray-300 text-xs">
+                  </span>
+                  <span className="text-gray-300 text-xs">
                     Ευχαριστιμένος Πελάτης
-                  </Typography>
+                  </span>
                 </div>
               </div>
             </div>
@@ -97,28 +90,28 @@ export function Testimonial() {
         <div className="bg-white/5 rounded-lg p-6 border border-white/10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
-              <Typography variant="h2" className="font-semibold text-white mb-1 text-3xl">
+              <h2 className="font-semibold text-white mb-1 text-3xl">
                 600+
-              </Typography>
-              <Typography className="text-gray-200 text-sm">
+              </h2>
+              <p className="text-gray-200 text-sm">
                 Ευχαριστιμένοι Πελάτες
-              </Typography>
+              </p>
             </div>
             <div>
-              <Typography variant="h2" className="font-semibold text-white mb-1 text-3xl">
+              <h2 className="font-semibold text-white mb-1 text-3xl">
                 15+
-              </Typography>
-              <Typography className="text-gray-200 text-sm">
+              </h2>
+              <p className="text-gray-200 text-sm">
                 Χρόνια Εμπειρίας
-              </Typography>
+              </p>
             </div>
             <div>
-              <Typography variant="h2" className="font-semibold text-white mb-1 text-3xl">
+              <h2 className="font-semibold text-white mb-1 text-3xl">
                 100%
-              </Typography>
-              <Typography className="text-gray-200 text-sm">
+              </h2>
+              <p className="text-gray-200 text-sm">
                 Επαρκής
-              </Typography>
+              </p>
             </div>
           </div>
         </div>

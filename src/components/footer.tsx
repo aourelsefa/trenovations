@@ -1,5 +1,3 @@
-import { Typography } from "@material-tailwind/react";
-
 const CURRENT_YEAR = new Date().getFullYear();
 
 export function Footer() {
@@ -9,51 +7,51 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
           {/* Professional Company Info */}
           <div>
-            <Typography className="text-xl font-semibold mb-3">
+            <h3 className="text-xl font-semibold mb-3">
               Trenovations
-            </Typography>
-            <Typography className="text-gray-300 leading-relaxed text-sm">
+            </h3>
+            <p className="text-gray-300 leading-relaxed text-sm">
               Ανακαινίζουμε σπίτια και επαγγελματικούς χώρους με μοντέρνο design, 
               ποιότητα υλικών και άψογη κατασκευή.
-            </Typography>
+            </p>
           </div>
           
           {/* Professional Quick Links */}
           <div>
-            <Typography className="font-semibold text-sm mb-3">
+            <h4 className="font-semibold text-sm mb-3">
               Γρήγοροι Σύνδεσμοι
-            </Typography>
+            </h4>
             <div className="space-y-1">
-              <Typography as="a" href="#home" className="block text-gray-300 hover:text-white transition-colors text-sm">
+              <a href="#home" className="block text-gray-300 hover:text-white transition-colors text-sm">
                 Αρχική
-              </Typography>
-              <Typography as="a" href="#services" className="block text-gray-300 hover:text-white transition-colors text-sm">
+              </a>
+              <a href="#services" className="block text-gray-300 hover:text-white transition-colors text-sm">
                 Υπηρεσίες
-              </Typography>
-              <Typography as="a" href="#contact" className="block text-gray-300 hover:text-white transition-colors text-sm">
+              </a>
+              <a href="#contact" className="block text-gray-300 hover:text-white transition-colors text-sm">
                 Επικοινωνία
-              </Typography>
+              </a>
             </div>
           </div>
           
           {/* Professional Contact Info */}
           <div>
-            <Typography className="font-semibold text-sm mb-3">
+            <h4 className="font-semibold text-sm mb-3">
               Επικοινωνία
-            </Typography>
+            </h4>
             <div className="space-y-1 text-gray-300 text-sm">
-              <Typography>📞 6980703882</Typography>
-              <Typography>✉️ info@trenovations.gr</Typography>
-              <Typography>📍 Αθήνα</Typography>
+              <span>📞 6980703882</span>
+              <span>✉️ info@trenovations.gr</span>
+              <span>📍 Αθήνα</span>
             </div>
           </div>
         </div>
         
         {/* Professional Bottom Bar */}
         <div className="border-t border-gray-600 pt-4 text-center">
-          <Typography className="text-gray-300 text-sm">
+          <p className="text-gray-300 text-sm">
             &copy; {CURRENT_YEAR} Trenovations. Όλα τα δικαιώματα διατηρούνται.
-          </Typography>
+          </p>
         </div>
       </div>
     </footer>

@@ -3,13 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import {
-  Navbar as MTNavbar,
-  Collapse,
-  Button,
-  IconButton,
-  Typography,
-} from "@material-tailwind/react";
-import {
   PhoneIcon,
   XMarkIcon,
   Bars3Icon,
@@ -45,10 +38,8 @@ function NavItem({ children, href }: NavItemProps) {
   
   return (
     <li>
-      <Typography
-        as="a"
+      <a
         href={href || "#"}
-        variant="paragraph"
         className={`flex items-center gap-2 font-medium transition-colors px-4 py-2 rounded-md ${
           isContact 
             ? "bg-[#001f3f] text-white hover:bg-white hover:text-[#001f3f] hover:border hover:border-[#001f3f]" 
@@ -56,7 +47,7 @@ function NavItem({ children, href }: NavItemProps) {
         }`}
       >
         {children}
-      </Typography>
+      </a>
     </li>
   );
 }
@@ -86,9 +77,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <MTNavbar 
-      shadow={false} 
-      fullWidth 
+    <nav 
       className={`border-0 sticky top-0 z-50 bg-[#fefdf2]/95 backdrop-blur-md transition-all duration-300 ${
         isScrolled ? "py-2" : "py-3"
       }`}
@@ -119,15 +108,15 @@ export function Navbar() {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <PhoneIcon className="w-4 h-4 text-[#001f3f]" />
-                    <Typography className="text-sm text-[#001f3f] font-medium">
+                    <span className="text-sm text-[#001f3f] font-medium">
                       6980703882
-                    </Typography>
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
                     <EnvelopeIcon className="w-4 h-4 text-[#001f3f]" />
-                    <Typography className="text-sm text-[#001f3f] font-medium">
+                    <span className="text-sm text-[#001f3f] font-medium">
                       info@trenovations.gr
-                    </Typography>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -144,36 +133,35 @@ export function Navbar() {
           </div>
           
           {/* Mobile Menu Button */}
-          <IconButton
-            variant="text"
+          <button
             onClick={handleOpen}
-            className="lg:hidden text-[#001f3f]"
+            className="lg:hidden text-[#001f3f] p-2"
           >
             {open ? (
               <XMarkIcon strokeWidth={2} className="h-5 w-5" />
             ) : (
               <Bars3Icon strokeWidth={2} className="h-5 w-5" />
             )}
-          </IconButton>
+          </button>
         </div>
       </div>
       
       {/* Mobile Menu */}
-      <Collapse open={open}>
+      {open && (
         <div className="container mx-auto px-4 py-4 bg-[#fefdf2]/95 backdrop-blur-md">
           {/* Mobile Contact Info */}
           <div className="flex flex-col gap-3 mb-4">
             <div className="flex items-center gap-2">
               <PhoneIcon className="w-4 h-4 text-[#001f3f]" />
-              <Typography className="text-sm text-[#001f3f] font-medium">
+              <span className="text-sm text-[#001f3f] font-medium">
                 6980703882
-              </Typography>
+              </span>
             </div>
             <div className="flex items-center gap-2">
               <EnvelopeIcon className="w-4 h-4 text-[#001f3f]" />
-              <Typography className="text-sm text-[#001f3f] font-medium">
+              <span className="text-sm text-[#001f3f] font-medium">
                 info@trenovations.gr
-              </Typography>
+              </span>
             </div>
           </div>
           
@@ -186,8 +174,8 @@ export function Navbar() {
             ))}
           </ul>
         </div>
-      </Collapse>
-    </MTNavbar>
+      )}
+    </nav>
   );
 }
 

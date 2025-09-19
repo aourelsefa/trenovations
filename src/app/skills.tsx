@@ -1,6 +1,5 @@
 "use client";
 
-import { Typography, Button } from "@material-tailwind/react";
 import {
   HomeIcon,
   WrenchScrewdriverIcon,
@@ -49,20 +48,14 @@ export function Skills() {
       <div className="container mx-auto container-spacing">
         {/* Professional Header */}
         <div className="text-center mb-12">
-          <Typography 
-            variant="h1" 
-            className="text-3xl lg:text-4xl font-semibold text-[#001f3f] mb-4 leading-tight"
-          >
+          <h1 className="text-3xl lg:text-4xl font-semibold text-[#001f3f] mb-4 leading-tight">
             Υπηρεσίες Ανακαίνισης
-          </Typography>
+          </h1>
           
-          <Typography
-            variant="lead"
-            className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
-          >
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Κάθε έργο ανακαίνισης το αντιμετωπίζουμε με επαγγελματισμό και μεράκι, 
             προσφέροντας λύσεις που συνδυάζουν λειτουργικότητα, αισθητική και ποιότητα.
-          </Typography>
+          </p>
         </div>
 
         {/* Professional Services Grid */}
@@ -78,28 +71,25 @@ export function Skills() {
               </div>
               
               {/* Professional Content */}
-              <Typography 
-                variant="h3" 
-                className="text-lg font-semibold text-[#001f3f] mb-3"
-              >
+              <h3 className="text-lg font-semibold text-[#001f3f] mb-3">
                 {service.title}
-              </Typography>
+              </h3>
               
-              <Typography className="text-gray-600 leading-relaxed text-sm">
+              <p className="text-gray-600 leading-relaxed text-sm">
                 {service.description}
-              </Typography>
+              </p>
             </div>
           ))}
         </div>
 
         {/* Professional Bottom CTA */}
         <div className="text-center mt-12">
-          <Typography className="text-base text-gray-600 mb-4">
+          <p className="text-base text-gray-600 mb-4">
             Έτοιμοι να ξεκινήσουμε το επόμενο έργο σας;
-          </Typography>
-          <Button className="professional-button text-white px-6 py-3 text-base">
+          </p>
+          <button className="professional-button text-white px-6 py-3 text-base">
             Επικοινωνήστε μαζί μας
-          </Button>
+          </button>
         </div>
       </div>
     </section>
