@@ -66,7 +66,7 @@ export function Testimonial() {
               
               {/* Professional Testimonial Text */}
               <Typography className="text-gray-100 leading-relaxed mb-4 text-sm">
-                "{testimonial.text}"
+                &ldquo;{testimonial.text}&rdquo;
               </Typography>
               
               {/* Professional Author */}

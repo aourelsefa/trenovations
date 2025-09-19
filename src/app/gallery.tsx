@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Typography, Button, Dialog } from "@material-tailwind/react";
 import Image from "next/image";
 import { EyeIcon, ArrowRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 
@@ -66,14 +65,14 @@ const CATEGORIES = ["Όλα", "Κουζίνα", "Μπάνιο", "Σαλόνι", 
 
 export function Gallery() {
   const [activeCategory, setActiveCategory] = useState("Όλα");
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<typeof GALLERY_PROJECTS[0] | null>(null);
   const [open, setOpen] = useState(false);
 
   const filteredProjects = activeCategory === "Όλα" 
     ? GALLERY_PROJECTS 
     : GALLERY_PROJECTS.filter(project => project.category === activeCategory);
 
-  const handleOpen = (project) => {
+  const handleOpen = (project: typeof GALLERY_PROJECTS[0]) => {
     setSelectedProject(project);
     setOpen(true);
   };
@@ -88,26 +87,19 @@ export function Gallery() {
       <div className="container mx-auto container-spacing">
         {/* Professional Header */}
         <div className="text-center mb-16">
-          <Typography 
-            variant="h1" 
-            className="text-4xl lg:text-5xl font-semibold text-[#001f3f] mb-6 leading-tight"
-          >
+          <h1 className="text-4xl lg:text-5xl font-semibold text-[#001f3f] mb-6 leading-tight">
             Τα έργα μας
-          </Typography>
+          </h1>
           
-          <Typography
-            variant="lead"
-            className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8"
-          >
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
             Δείτε τα πιο εντυπωσιακά έργα ανακαίνισης που έχουμε ολοκληρώσει.
-          </Typography>
+          </p>
 
           {/* Working Category Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             {CATEGORIES.map((category) => (
-              <Button
+              <button
                 key={category}
-                variant={activeCategory === category ? "filled" : "outlined"}
                 onClick={() => setActiveCategory(category)}
                 className={`px-5 py-2 rounded-full font-medium transition-all duration-300 ${
                   activeCategory === category 
@@ -116,7 +108,7 @@ export function Gallery() {
                 }`}
               >
                 {category}
-              </Button>
+              </button>
             ))}
           </div>
         </div>
@@ -142,9 +134,9 @@ export function Gallery() {
                 <div className="absolute inset-0 bg-[#001f3f]/0 group-hover:bg-[#001f3f]/80 transition-all duration-300 flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
                     <EyeIcon className="w-8 h-8 text-white mx-auto mb-2" />
-                    <Typography className="text-white font-semibold text-sm">
+                    <span className="text-white font-semibold text-sm">
                       {project.title}
-                    </Typography>
+                    </span>
                   </div>
                 </div>
 
@@ -160,20 +152,16 @@ export function Gallery() {
         </div>
 
         {/* Image Modal */}
-        <Dialog
-          open={open}
-          handler={handleClose}
-          size="xl"
-          className="bg-transparent shadow-none"
-        >
-          <div className="relative">
-            {/* Close Button */}
-            <button
-              onClick={handleClose}
-              className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
-            >
-              <XMarkIcon className="w-6 h-6" />
-            </button>
+        {open && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80" onClick={handleClose}>
+            <div className="relative max-w-4xl max-h-[90vh] mx-4" onClick={(e) => e.stopPropagation()}>
+              {/* Close Button */}
+              <button
+                onClick={handleClose}
+                className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+              >
+                <XMarkIcon className="w-6 h-6" />
+              </button>
 
             {/* Modal Image */}
             {selectedProject && (
@@ -188,46 +176,41 @@ export function Gallery() {
                 
                 {/* Image Info */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
-                  <Typography className="text-white text-xl font-semibold mb-1">
+                  <h3 className="text-white text-xl font-semibold mb-1">
                     {selectedProject.title}
-                  </Typography>
-                  <Typography className="text-gray-200 text-sm">
+                  </h3>
+                  <p className="text-gray-200 text-sm">
                     {selectedProject.category}
-                  </Typography>
+                  </p>
                 </div>
               </div>
             )}
+            </div>
           </div>
-        </Dialog>
+        )}
 
         {/* Professional CTA Section */}
         <div className="text-center bg-[#001f3f] rounded-xl p-10 text-white">
-          <Typography 
-            variant="h2" 
-            className="text-2xl lg:text-3xl font-semibold mb-4"
-          >
+          <h2 className="text-2xl lg:text-3xl font-semibold mb-4">
             Έτοιμοι να Δημιουργήσουμε το Δικό σας Έργο;
-          </Typography>
+          </h2>
           
-          <Typography className="text-lg text-gray-200 mb-6 max-w-xl mx-auto">
+          <p className="text-lg text-gray-200 mb-6 max-w-xl mx-auto">
             Αφήστε μας να μεταμορφώσουμε τον χώρο σας σε κάτι εξαιρετικό.
-          </Typography>
+          </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-[#001f3f] px-6 py-3 text-base font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+            <button
+              className="bg-white text-[#001f3f] px-6 py-3 text-base font-semibold rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center"
             >
               <ArrowRightIcon className="w-4 h-4 mr-2" />
               Ξεκινήστε το Έργο σας
-            </Button>
-            <Button
-              variant="outlined"
-              size="lg"
+            </button>
+            <button
               className="border border-white text-white hover:bg-white hover:text-[#001f3f] px-6 py-3 text-base font-semibold rounded-lg transition-colors"
             >
               Επικοινωνήστε μαζί μας
-            </Button>
+            </button>
           </div>
         </div>
       </div>

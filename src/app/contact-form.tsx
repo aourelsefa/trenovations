@@ -1,13 +1,5 @@
 "use client";
 
-import {
-  Typography,
-  Radio,
-  Input,
-  Textarea,
-  Button,
-  IconButton,
-} from "@material-tailwind/react";
 import { EnvelopeIcon, PhoneIcon, MapPinIcon, ClockIcon } from "@heroicons/react/24/solid";
 
 export function ContactForm() {
@@ -16,33 +8,27 @@ export function ContactForm() {
       <div className="container mx-auto container-spacing">
         {/* Professional Header */}
         <div className="text-center mb-12">
-          <Typography 
-            variant="h1" 
-            className="text-3xl lg:text-4xl font-semibold text-[#001f3f] mb-4 leading-tight"
-          >
+          <h1 className="text-3xl lg:text-4xl font-semibold text-[#001f3f] mb-4 leading-tight">
             Επικοινωνήστε μαζί μας
-          </Typography>
+          </h1>
           
-          <Typography
-            variant="lead"
-            className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed"
-          >
-            Μη διστάσετε να επικοινωνήσετε μαζί μας μέσω της φόρμας επικοινωνίας 
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Μη διστάσετε να επικοινωνήσετε μαζί μας μέσω της φόρμας επικοινωνίας
             και ας ξεκινήσουμε ένα ταξίδι καινοτομίας και επιτυχίας.
-          </Typography>
+          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* Professional Contact Info */}
           <div className="space-y-6">
             <div className="bg-[#001f3f] p-6 rounded-lg text-white">
-              <Typography variant="h2" className="font-semibold mb-4 text-xl">
+              <h2 className="font-semibold mb-4 text-xl">
                 Στοιχεία Επικοινωνίας
-              </Typography>
+              </h2>
               
-              <Typography className="text-gray-200 mb-6 text-sm">
+              <p className="text-gray-200 mb-6 text-sm">
                 Συμπληρώστε τη φόρμα και η ομάδα μας θα σας απαντήσει εντός 24 ωρών.
-              </Typography>
+              </p>
               
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
@@ -50,8 +36,8 @@ export function ContactForm() {
                     <PhoneIcon className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <Typography className="font-semibold text-sm">Τηλέφωνο</Typography>
-                    <Typography className="text-gray-200 text-sm">6980703882</Typography>
+                    <span className="font-semibold text-sm">Τηλέφωνο</span>
+                    <span className="text-gray-200 text-sm">6980703882</span>
                   </div>
                 </div>
                 
@@ -60,8 +46,8 @@ export function ContactForm() {
                     <EnvelopeIcon className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <Typography className="font-semibold text-sm">Email</Typography>
-                    <Typography className="text-gray-200 text-sm">info@trenovations.gr</Typography>
+                    <span className="font-semibold text-sm">Email</span>
+                    <span className="text-gray-200 text-sm">info@trenovations.gr</span>
                   </div>
                 </div>
                 
@@ -70,8 +56,8 @@ export function ContactForm() {
                     <MapPinIcon className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <Typography className="font-semibold text-sm">Τοποθεσία</Typography>
-                    <Typography className="text-gray-200 text-sm">Αθήνα</Typography>
+                    <span className="font-semibold text-sm">Τοποθεσία</span>
+                    <span className="text-gray-200 text-sm">Αθήνα</span>
                   </div>
                 </div>
                 
@@ -80,25 +66,25 @@ export function ContactForm() {
                     <ClockIcon className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <Typography className="font-semibold text-sm">Ώρες Λειτουργίας</Typography>
-                    <Typography className="text-gray-200 text-sm">Δευτέρα - Παρασκευή: 8:00 - 18:00</Typography>
+                    <span className="font-semibold text-sm">Ώρες Λειτουργίας</span>
+                    <span className="text-gray-200 text-sm">Δευτέρα - Παρασκευή: 8:00 - 18:00</span>
                   </div>
                 </div>
               </div>
               
               {/* Professional Social Media */}
               <div className="mt-6 pt-4 border-t border-white/20">
-                <Typography className="font-semibold mb-3 text-sm">Ακολουθήστε μας</Typography>
+                <span className="font-semibold mb-3 text-sm">Ακολουθήστε μας</span>
                 <div className="flex gap-3">
-                  <IconButton className="bg-white/20 hover:bg-white/30 text-white p-2">
+                  <button className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-md">
                     <i className="fa-brands fa-facebook text-sm" />
-                  </IconButton>
-                  <IconButton className="bg-white/20 hover:bg-white/30 text-white p-2">
+                  </button>
+                  <button className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-md">
                     <i className="fa-brands fa-instagram text-sm" />
-                  </IconButton>
-                  <IconButton className="bg-white/20 hover:bg-white/30 text-white p-2">
+                  </button>
+                  <button className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-md">
                     <i className="fa-brands fa-linkedin text-sm" />
-                  </IconButton>
+                  </button>
                 </div>
               </div>
             </div>
@@ -106,111 +92,117 @@ export function ContactForm() {
 
           {/* Professional Contact Form */}
           <div className="professional-card p-6">
-            <Typography variant="h2" className="font-semibold text-[#001f3f] mb-4 text-xl">
+            <h2 className="font-semibold text-[#001f3f] mb-4 text-xl">
               Στείλτε μας μήνυμα
-            </Typography>
+            </h2>
             
             <form className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <Typography className="font-semibold text-[#001f3f] mb-1 text-sm">
+                  <span className="font-semibold text-[#001f3f] mb-1 text-sm">
                     Όνομα *
-                  </Typography>
-                  <Input
-                    color="gray"
-                    size="md"
+                  </span>
+                  <input
+                    type="text"
                     placeholder="π.χ. Γιάννης"
-                    className="bg-white"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#001f3f] focus:border-transparent"
                   />
                 </div>
                 <div>
-                  <Typography className="font-semibold text-[#001f3f] mb-1 text-sm">
+                  <span className="font-semibold text-[#001f3f] mb-1 text-sm">
                     Επώνυμο *
-                  </Typography>
-                  <Input
-                    color="gray"
-                    size="md"
+                  </span>
+                  <input
+                    type="text"
                     placeholder="π.χ. Παπαδόπουλος"
-                    className="bg-white"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#001f3f] focus:border-transparent"
                   />
                 </div>
               </div>
               
               <div>
-                <Typography className="font-semibold text-[#001f3f] mb-1 text-sm">
+                <span className="font-semibold text-[#001f3f] mb-1 text-sm">
                   Email *
-                </Typography>
-                <Input
-                  color="gray"
-                  size="md"
+                </span>
+                <input
+                  type="email"
                   placeholder="π.χ. giannis@email.com"
-                  className="bg-white"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#001f3f] focus:border-transparent"
                 />
               </div>
               
               <div>
-                <Typography className="font-semibold text-[#001f3f] mb-1 text-sm">
+                <span className="font-semibold text-[#001f3f] mb-1 text-sm">
                   Τηλέφωνο
-                </Typography>
-                <Input
-                  color="gray"
-                  size="md"
+                </span>
+                <input
+                  type="tel"
                   placeholder="π.χ. 6981234567"
-                  className="bg-white"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#001f3f] focus:border-transparent"
                 />
               </div>
               
               <div>
-                <Typography className="font-semibold text-[#001f3f] mb-2 text-sm">
+                <span className="font-semibold text-[#001f3f] mb-2 text-sm">
                   Τι σας ενδιαφέρει; *
-                </Typography>
+                </span>
                 <div className="space-y-2">
-                  <Radio
-                    color="gray"
-                    name="type"
-                    label="Ανακαίνιση Σπιτιού"
-                    defaultChecked
-                    className="text-[#001f3f] text-sm"
-                  />
-                  <Radio 
-                    color="gray" 
-                    name="type" 
-                    label="Ανακαίνιση Επαγγελματικού Χώρου"
-                    className="text-[#001f3f] text-sm"
-                  />
-                  <Radio 
-                    color="gray" 
-                    name="type" 
-                    label="Τεχνικές Εργασίες"
-                    className="text-[#001f3f] text-sm"
-                  />
-                  <Radio 
-                    color="gray" 
-                    name="type" 
-                    label="Άλλο"
-                    className="text-[#001f3f] text-sm"
-                  />
+                  <label className="flex items-center space-x-2 text-sm text-gray-700">
+                    <input
+                      type="radio"
+                      name="type"
+                      value="Ανακαίνιση Σπιτιού"
+                      defaultChecked
+                      className="text-[#001f3f] focus:ring-[#001f3f]"
+                    />
+                    <span>Ανακαίνιση Σπιτιού</span>
+                  </label>
+                  <label className="flex items-center space-x-2 text-sm text-gray-700">
+                    <input
+                      type="radio"
+                      name="type"
+                      value="Ανακαίνιση Επαγγελματικού Χώρου"
+                      className="text-[#001f3f] focus:ring-[#001f3f]"
+                    />
+                    <span>Ανακαίνιση Επαγγελματικού Χώρου</span>
+                  </label>
+                  <label className="flex items-center space-x-2 text-sm text-gray-700">
+                    <input
+                      type="radio"
+                      name="type"
+                      value="Τεχνικές Εργασίες"
+                      className="text-[#001f3f] focus:ring-[#001f3f]"
+                    />
+                    <span>Τεχνικές Εργασίες</span>
+                  </label>
+                  <label className="flex items-center space-x-2 text-sm text-gray-700">
+                    <input
+                      type="radio"
+                      name="type"
+                      value="Άλλο"
+                      className="text-[#001f3f] focus:ring-[#001f3f]"
+                    />
+                    <span>Άλλο</span>
+                  </label>
                 </div>
               </div>
               
               <div>
-                <Typography className="font-semibold text-[#001f3f] mb-1 text-sm">
+                <span className="font-semibold text-[#001f3f] mb-1 text-sm">
                   Το Μήνυμά σας *
-                </Typography>
-                <Textarea
-                  color="gray"
-                  size="md"
+                </span>
+                <textarea
                   placeholder="Περιγράψτε το έργο σας..."
-                  className="bg-white min-h-[100px]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#001f3f] focus:border-transparent min-h-[100px] resize-vertical"
                 />
               </div>
               
-              <Button 
+              <button 
+                type="submit"
                 className="w-full professional-button text-white py-3 text-base"
-                size="md"
               >
                 Αποστολή Μηνύματος
-              </Button>
+              </button>
             </form>
           </div>
         </div>

@@ -1,6 +1,5 @@
 "use client";
 
-import { Button, Typography } from "@material-tailwind/react";
 import { PhoneIcon, HomeIcon } from "@heroicons/react/24/solid";
 
 function Hero() {
@@ -21,75 +20,66 @@ function Hero() {
       <div className="relative z-10 text-center text-white px-8 max-w-4xl mx-auto">
         {/* Professional Badge */}
         <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-md mb-8">
-          <Typography className="text-sm font-medium">
+          <span className="text-sm font-medium">
             600+ Ευχαριστιμένοι Πελάτες
-          </Typography>
+          </span>
         </div>
 
         {/* Professional Main Heading */}
-        <Typography
-          variant="h1"
-          className="text-4xl lg:text-6xl font-semibold mb-6 leading-tight"
-        >
+        <h1 className="text-4xl lg:text-6xl font-semibold mb-6 leading-tight">
           Δώσε Νέα Ζωή
           <span className="block text-white">
             στον Χώρο σου
           </span>
-        </Typography>
+        </h1>
         
         {/* Professional Description */}
-        <Typography
-          variant="lead"
-          className="text-lg lg:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-gray-100"
-        >
+        <p className="text-lg lg:text-xl mb-10 max-w-3xl mx-auto leading-relaxed text-gray-100">
           Ανακαινίζουμε σπίτια και επαγγελματικούς χώρους με μοντέρνο design, 
           ποιότητα υλικών και άψογη κατασκευή.
-        </Typography>
+        </p>
 
         {/* Professional CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Button
-            size="lg"
+          <button
             className="professional-button text-white px-6 py-3 text-base flex items-center justify-center"
           >
             <PhoneIcon className="w-4 h-4 mr-2 flex-shrink-0" />
             <span className="whitespace-nowrap">Δωρεάν Εκτίμηση</span>
-          </Button>
-          <Button
-            variant="outlined"
-            size="lg"
+          </button>
+          <button
             className="border border-white text-white hover:bg-white hover:text-[#001f3f] px-6 py-3 text-base font-medium rounded-md flex items-center justify-center"
           >
             <HomeIcon className="w-4 h-4 mr-2 flex-shrink-0" />
             <span className="whitespace-nowrap">Δες τα Έργα μας</span>
-          </Button>
+          </button>
         </div>
 
         {/* Professional Stats */}
         <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
           <div className="text-center">
-            <Typography variant="h3" className="font-semibold text-white mb-1 text-3xl">
+            <h3 className="font-semibold text-white mb-1 text-3xl">
               600+
-            </Typography>
-            <Typography className="text-gray-200 text-sm">
+            </h3>
+            <p className="text-gray-200 text-sm">
               Έργα
-            </Typography>
+            </p>
           </div>
           <div className="text-center">
-            <Typography variant="h3" className="font-semibold text-white mb-1 text-3xl">
+            <h3 className="font-semibold text-white mb-1 text-3xl">
               15+
-            </Typography>
-            <Typography className="text-gray-200 text-sm">
+            </h3>
+            <p className="text-gray-200 text-sm">
               Χρόνια Εμπειρίας
-            </Typography>
+            </p>
           </div>
           <div className="text-center">
-            <Typography variant="h3" className="font-semibold text-white mb-1 text-3xl">
+            <h3 className="font-semibold text-white mb-1 text-3xl">
               100%
-            </Typography>
-            <Typography className="text-gray-200 text-sm">
+            </h3>
+            <p className="text-gray-200 text-sm">
               Επαρκής
-            </Typography>
+            </p>
           </div>
         </div>
       </div>
