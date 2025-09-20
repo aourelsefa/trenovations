@@ -1,17 +1,20 @@
 "use client";
 
 import { PhoneIcon, HomeIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 
 function Hero() {
   return (
     <header id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Professional Overlay */}
       <div className="absolute inset-0 z-0">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2016&q=80')"
-          }}
+        <Image
+          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2016&q=80"
+          alt="Σύγχρονος σχεδιασμός εσωτερικών χώρων - Ανακαίνιση σπιτιού με μοντέρνο design"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-[#001f3f]/50"></div>
       </div>
@@ -41,36 +44,38 @@ function Hero() {
 
         {/* Professional CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <button
+          <a
+            href="#contact"
             className="professional-button text-white px-6 py-3 text-base flex items-center justify-center"
           >
             <PhoneIcon className="w-4 h-4 mr-2 flex-shrink-0" />
             <span className="whitespace-nowrap">Δωρεάν Εκτίμηση</span>
-          </button>
-          <button
-            className="border border-white text-white hover:bg-white hover:text-[#001f3f] px-6 py-3 text-base font-medium rounded-md flex items-center justify-center"
+          </a>
+          <a
+            href="/gallery"
+            className="border border-white text-white hover:bg-white hover:text-[#001f3f] px-6 py-3 text-base font-medium rounded-md flex items-center justify-center transition-colors"
           >
             <HomeIcon className="w-4 h-4 mr-2 flex-shrink-0" />
             <span className="whitespace-nowrap">Δες τα Έργα μας</span>
-          </button>
+          </a>
         </div>
 
         {/* Professional Stats */}
         <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
           <div className="text-center">
             <h3 className="font-semibold text-white mb-1 text-3xl">
-              600+
+              300+
             </h3>
             <p className="text-gray-200 text-sm">
-              Έργα
+              Υπηρεσίες
             </p>
           </div>
           <div className="text-center">
             <h3 className="font-semibold text-white mb-1 text-3xl">
-              15+
+              150+
             </h3>
             <p className="text-gray-200 text-sm">
-              Χρόνια Εμπειρίας
+              Πελάτες
             </p>
           </div>
           <div className="text-center">

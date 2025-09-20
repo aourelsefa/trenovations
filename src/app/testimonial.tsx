@@ -1,8 +1,67 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { StarIcon } from "@heroicons/react/24/solid";
+
+// Counter component for animated numbers
+const Counter = ({ end, duration = 2000 }: { end: number; duration?: number }) => {
+  const [count, setCount] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+  const counterRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasStarted) {
+            setHasStarted(true);
+          }
+        });
+      },
+      { threshold: 0.5 } // Start when 50% of the element is visible
+    );
+
+    const currentRef = counterRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [hasStarted]);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    let startTime: number;
+    let animationFrame: number;
+
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      
+      setCount(Math.floor(progress * end));
+      
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+    };
+  }, [end, duration, hasStarted]);
+
+  return <span ref={counterRef}>{count}</span>;
+};
 
 export function Testimonial() {
   const testimonials = [
@@ -67,9 +126,6 @@ export function Testimonial() {
                 <div className="font-semibold text-white text-sm">
                   {testimonial.name}
                 </div>
-                <div className="text-gray-300 text-xs">
-                  Ευχαριστιμένος Πελάτης
-                </div>
               </div>
             </div>
           ))}
@@ -80,18 +136,18 @@ export function Testimonial() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div>
               <h2 className="font-semibold text-white mb-1 text-3xl">
-                600+
+                <Counter end={300} />+
               </h2>
               <p className="text-gray-200 text-sm">
-                Ευχαριστιμένοι Πελάτες
+                Υπηρεσίες
               </p>
             </div>
             <div>
               <h2 className="font-semibold text-white mb-1 text-3xl">
-                15+
+                <Counter end={150} />+
               </h2>
               <p className="text-gray-200 text-sm">
-                Χρόνια Εμπειρίας
+                Πελάτες
               </p>
             </div>
             <div>

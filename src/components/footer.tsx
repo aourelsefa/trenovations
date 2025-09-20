@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-[#001f3f] text-white py-8">
       <div className="container mx-auto container-spacing">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
           {/* Professional Company Info */}
           <div>
             <h3 className="text-xl font-semibold mb-3">
@@ -25,6 +25,9 @@ export function Footer() {
               <a href="#home" className="block text-gray-300 hover:text-white transition-colors text-sm">
                 Αρχική
               </a>
+              <a href="/gallery" className="block text-gray-300 hover:text-white transition-colors text-sm">
+                Έργα
+              </a>
               <a href="#services" className="block text-gray-300 hover:text-white transition-colors text-sm">
                 Υπηρεσίες
               </a>
@@ -43,6 +46,21 @@ export function Footer() {
               <div>📞 6980703882</div>
               <div>✉️ info@trenovations.gr</div>
               <div>📍 Αθήνα</div>
+            </div>
+          </div>
+          
+          {/* Legal Links */}
+          <div>
+            <h4 className="font-semibold text-sm mb-3">
+              Νομικά
+            </h4>
+            <div className="space-y-1">
+              <a href="/privacy-policy" className="block text-gray-300 hover:text-white transition-colors text-sm">
+                Πολιτική Απορρήτου
+              </a>
+              <a href="/terms-of-use" className="block text-gray-300 hover:text-white transition-colors text-sm">
+                Όροι Χρήσης
+              </a>
             </div>
           </div>
         </div>

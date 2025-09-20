@@ -16,7 +16,7 @@ const NAV_MENU = [
   },
   {
     name: "Υπηρεσίες",
-    href: "#services",
+    href: "/#services",
   },
   {
     name: "Έργα",
@@ -24,7 +24,7 @@ const NAV_MENU = [
   },
   {
     name: "Επικοινωνία",
-    href: "#contact",
+    href: "/#contact",
   },
 ];
 
@@ -59,15 +59,22 @@ export function Navbar() {
   const handleOpen = () => setOpen((cur) => !cur);
 
   React.useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          // Use a higher threshold and smoother transition
+          setIsScrolled(scrollY > 150);
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    // Throttled scroll listener
+    window.addEventListener("scroll", handleScroll, { passive: true });
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpen(false)
@@ -80,31 +87,30 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav 
-      className={`border-0 sticky top-0 z-50 bg-[#fefdf2]/95 backdrop-blur-md transition-all duration-300 ${
-        isScrolled ? "py-2" : "py-3"
-      }`}
-    >
+    <nav className="border-0 sticky top-0 z-50 bg-[#fefdf2]/95 backdrop-blur-md py-3">
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
           {/* Logo with scroll transition */}
           <div className="flex items-center">
-            <Image
-              src="https://trenovations.gr/wp-content/uploads/2025/09/trenovations-high-resolution-logo-transparent.png"
-              alt="Trenovations Logo"
-              width={200}
-              height={80}
-              className={`w-auto transition-all duration-300 ${
-                isScrolled ? "h-12" : "h-20"
-              }`}
-            />
+            <a href="/" className="flex items-center">
+              <Image
+                src="https://trenovations.gr/wp-content/uploads/2025/09/trenovations-high-resolution-logo-transparent.png"
+                alt="Trenovations Logo - Ανακαινίσεις Σπιτιών και Επαγγελματικών Χώρων"
+                width={200}
+                height={80}
+                className={`w-auto transition-all duration-500 ease-out ${
+                  isScrolled ? "h-12 scale-90" : "h-20 scale-100"
+                }`}
+                priority
+              />
+            </a>
           </div>
           
           {/* Right Column - Desktop */}
           <div className="hidden lg:flex flex-col items-end gap-2">
-            {/* Contact Info - Hidden on scroll */}
-            <div className={`transition-all duration-300 ${
-              isScrolled ? "opacity-0 h-0 overflow-hidden" : "opacity-100 h-auto"
+            {/* Contact Info - Smooth fade out on scroll */}
+            <div className={`transition-all duration-500 ease-out ${
+              isScrolled ? "opacity-0 max-h-0 overflow-hidden transform -translate-y-2" : "opacity-100 max-h-20 transform translate-y-0"
             }`}>
               <div className="flex items-center gap-6">
                 {/* Contact Info */}
@@ -125,8 +131,10 @@ export function Navbar() {
               </div>
             </div>
             
-            {/* Menu Items - Always visible */}
-            <ul className="flex items-center gap-6">
+            {/* Menu Items - Always visible with smooth transition */}
+            <ul className={`flex items-center gap-6 transition-all duration-500 ease-out ${
+              isScrolled ? "transform translate-y-0" : "transform translate-y-0"
+            }`}>
               {NAV_MENU.map(({ name, href }) => (
                 <NavItem key={name} href={href}>
                   {name}

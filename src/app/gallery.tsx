@@ -7,57 +7,51 @@ import { EyeIcon, ArrowRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
 const GALLERY_PROJECTS = [
   {
     id: 1,
-    title: "Μοντέρνα Κουζίνα",
-    category: "Κουζίνα",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    title: "Μοντέρνο Μπάνιο",
+    category: "Μπάνιο",
+    image: "https://plus.unsplash.com/premium_photo-1676320514021-7c68dda90026?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 2,
-    title: "Εξωτικό Μπάνιο",
-    category: "Μπάνιο",
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    title: "Σύγχρονο Σαλόνι",
+    category: "Σαλόνι",
+    image: "https://images.unsplash.com/photo-1674649207083-281c2517ab49?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 3,
-    title: "Σαλόνι Στυλ",
+    title: "Εξαιρετικό Σαλόνι",
     category: "Σαλόνι",
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1662394027253-dc37506c2587?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 4,
-    title: "Υπνοδωμάτιο Ονείρων",
-    category: "Υπνοδωμάτιο",
-    image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    title: "Μοντέρνα Κουζίνα",
+    category: "Κουζίνα",
+    image: "https://images.unsplash.com/flagged/photo-1573168710465-7f7da9a23a15?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 5,
-    title: "Επαγγελματικός Χώρος",
-    category: "Επαγγελματικός",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    title: "Σαλόνι Ονείρων",
+    category: "Σαλόνι",
+    image: "https://images.unsplash.com/photo-1631193908297-ebadbad17167?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 6,
-    title: "Τεράστια Τραπεζαρία",
-    category: "Τραπεζαρία",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    title: "Εξωτικό Μπάνιο",
+    category: "Μπάνιο",
+    image: "https://images.unsplash.com/photo-1617850687405-a18454436d77?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 7,
     title: "Σύγχρονη Κουζίνα",
     category: "Κουζίνα",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1733431766131-2e79fc11cbb4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 8,
-    title: "Μοντέρνο Μπάνιο",
-    category: "Μπάνιο",
-    image: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    id: 9,
-    title: "Εξαιρετικό Σαλόνι",
-    category: "Σαλόνι",
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+    title: "Υπνοδωμάτιο Ονείρων",
+    category: "Υπνοδωμάτιο",
+    image: "https://images.unsplash.com/photo-1646592492046-da1c3765f74a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   }
 ];
 
@@ -200,17 +194,19 @@ export function Gallery() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
+            <a
+              href="/#contact"
               className="bg-white text-[#001f3f] px-6 py-3 text-base font-semibold rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center"
             >
               <ArrowRightIcon className="w-4 h-4 mr-2" />
               Ξεκινήστε το Έργο σας
-            </button>
-            <button
+            </a>
+            <a
+              href="/#contact"
               className="border border-white text-white hover:bg-white hover:text-[#001f3f] px-6 py-3 text-base font-semibold rounded-lg transition-colors"
             >
               Επικοινωνήστε μαζί μας
-            </button>
+            </a>
           </div>
         </div>
       </div>
