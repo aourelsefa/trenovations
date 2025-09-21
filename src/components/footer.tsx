@@ -36,6 +36,9 @@ export function Footer() {
               <a href="#contact" className="block text-gray-300 hover:text-white transition-colors text-sm">
                 Επικοινωνία
               </a>
+              <a href="/faq" className="block text-gray-300 hover:text-white transition-colors text-sm">
+                Συχνές Ερωτήσεις
+              </a>
             </div>
           </div>
           

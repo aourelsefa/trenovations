@@ -52,6 +52,56 @@ const BLOG_POSTS = [
     readTime: "8 λεπτά",
     href: "/blog/plakakia-patoma-odigos-epilogis-ylikon",
     category: "Πλακάκια"
+  },
+  {
+    id: 6,
+    title: "Κόστος Ανακαίνισης Σπιτιού 2024: Ολοκληρωμένος Οδηγός",
+    excerpt: "Μάθετε το κόστος ανακαίνισης σπιτιού στην Αθήνα 2024. Λεπτομερής οδηγός τιμών για όλες τις υπηρεσίες ανακαίνισης.",
+    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    date: "20 Ιανουαρίου 2024",
+    readTime: "10 λεπτά",
+    href: "/blog/kostos-anakainisis-spitiou-2024-odigos",
+    category: "Κόστος Ανακαίνισης"
+  },
+  {
+    id: 7,
+    title: "Ανακαίνιση Σαλονιού: Ιδέες Σχεδιασμού και Συμβουλές 2024",
+    excerpt: "Ανακαινίστε το σαλόνι σας με σύγχρονες ιδέες σχεδιασμού. Συμβουλές για χρώματα, έπιπλα, φωτισμό και οργάνωση χώρου.",
+    image: "https://images.unsplash.com/photo-1674649207083-281c2517ab49?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    date: "18 Ιανουαρίου 2024",
+    readTime: "9 λεπτά",
+    href: "/blog/anakainisi-salonou-idees-sxediasmou-2024",
+    category: "Ανακαίνιση Σαλονιού"
+  },
+  {
+    id: 8,
+    title: "Ανακαίνιση Υπνοδωματίου: Συμβουλές για Ύπνο και Χαλάρωση",
+    excerpt: "Ανακαινίστε το υπνοδωμάτιό σας για καλύτερο ύπνο και χαλάρωση. Συμβουλές για χρώματα, έπιπλα, φωτισμό και οργάνωση.",
+    image: "https://images.unsplash.com/photo-1646592492046-da1c3765f74a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    date: "16 Ιανουαρίου 2024",
+    readTime: "7 λεπτά",
+    href: "/blog/anakainisi-ypnodomatio-symvoules-ypno-chalarosi",
+    category: "Ανακαίνιση Υπνοδωματίου"
+  },
+  {
+    id: 9,
+    title: "Ενεργειακή Ανακαίνιση: Εξοικονόμηση Ενέργειας και Κόστους",
+    excerpt: "Μάθετε για την ενεργειακή ανακαίνιση σπιτιού. Συμβουλές για εξοικονόμηση ενέργειας, μόνωση, ηλιακά πάνελ και κρατικές επιδοτήσεις.",
+    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    date: "14 Ιανουαρίου 2024",
+    readTime: "11 λεπτά",
+    href: "/blog/energeiaki-anakainisi-exoikonomisi-energeias-kostous",
+    category: "Ενεργειακή Ανακαίνιση"
+  },
+  {
+    id: 10,
+    title: "Ανακαίνιση Γραφείου: Σύγχρονος Εργασιακός Χώρος",
+    excerpt: "Ανακαινίστε το γραφείο σας για μεγαλύτερη παραγωγικότητα. Συμβουλές για σχεδιασμό, φωτισμό, ακουστική και έξυπνες λύσεις.",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    date: "12 Ιανουαρίου 2024",
+    readTime: "8 λεπτά",
+    href: "/blog/anakainisi-grafeiou-sygchronos-ergasiakos-choros",
+    category: "Ανακαίνιση Γραφείου"
   }
 ];
 

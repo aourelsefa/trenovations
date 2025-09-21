@@ -23,6 +23,10 @@ const NAV_MENU = [
     href: "/gallery",
   },
   {
+    name: "Blog",
+    href: "/blog",
+  },
+  {
     name: "Επικοινωνία",
     href: "/#contact",
   },
