@@ -1,5 +1,5 @@
 // components
-import { Navbar, Footer } from "@/components";
+import { Navbar, Footer, BlogSection } from "@/components";
 
 // sections
 import Hero from "./hero";
@@ -15,6 +15,7 @@ export default function TrenovationsWebsite() {
       <Skills />
       <Testimonial />
       <ContactForm />
+      <BlogSection />
       <Footer />
     </>
   );

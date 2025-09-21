@@ -140,8 +140,10 @@ export function ContactForm() {
                       <PhoneIcon className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <span className="font-semibold text-sm">Τηλέφωνο</span><br />
-                      <span className="text-gray-200 text-sm">6980703882</span>
+                      <span className="font-semibold text-sm">Τηλέφωνα</span><br />
+                      <a href="tel:+306980703882" className="text-gray-200 text-sm hover:text-white transition-colors">6980703882</a><br />
+                      <a href="tel:+306998026625" className="text-gray-200 text-sm hover:text-white transition-colors">6998026625</a><br />
+                      <a href="tel:+306974991096" className="text-gray-200 text-sm hover:text-white transition-colors">6974991096</a>
                     </div>
                   </div>
 
@@ -237,7 +239,7 @@ export function ContactForm() {
                 </div>
                 <div>
                   <span className="font-semibold text-[#001f3f] mb-1 text-sm">
-                    Επώνυμο *
+                    Επώνυμο
                   </span>
                   <input
                     type="text"
@@ -245,7 +247,6 @@ export function ContactForm() {
                     value={formData.lastName}
                     onChange={handleInputChange}
                     placeholder="π.χ. Παπαδόπουλος"
-                    required
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#001f3f] focus:border-transparent"
                   />
                 </div>

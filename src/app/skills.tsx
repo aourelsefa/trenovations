@@ -1,47 +1,38 @@
 "use client";
 
-import {
-  HomeIcon,
-  WrenchScrewdriverIcon,
-  PaintBrushIcon,
-  CubeIcon,
-  BoltIcon,
-  CogIcon,
-} from "@heroicons/react/24/solid";
-
 const SERVICES = [
   {
-    icon: HomeIcon,
+    icon: "https://cdn.discordapp.com/attachments/773533251867377684/1419455833837801492/image.png?ex=68d1d2c3&is=68d08143&hm=d8056a25c2109bdf7973f42eb153e1f3824dfa2380c85ee7f9e1e839103a20b3",
     title: "Ανακαίνιση κουζίνας",
     description: "Δώστε νέα ζωή στην κουζίνα σας με μοντέρνες λύσεις που συνδυάζουν στυλ και πρακτικότητα.",
     href: "/services/anakainisi-kouzinas",
   },
   {
-    icon: WrenchScrewdriverIcon,
+    icon: "https://cdn.discordapp.com/attachments/773533251867377684/1419456205473972374/image.png?ex=68d1d31b&is=68d0819b&hm=a8980e26f56a104195d3fd378898b989d5c33d0a368f9e4c68792737b0f7ee7e",
     title: "Ανακαίνιση μπάνιου",
     description: "Ανανεώστε το μπάνιο σας με σύγχρονο σχεδιασμό, εργονομία και υψηλής ποιότητας υλικά.",
     href: "/services/anakainisi-mpaniou",
   },
   {
-    icon: PaintBrushIcon,
+    icon: "https://cdn.discordapp.com/attachments/773533251867377684/1419456253423517746/image.png?ex=68d1d327&is=68d081a7&hm=00fdb4b83cb0f74b8450edea1476139cf8608a82229d48ba95285178096875a3",
     title: "Ανακαίνιση σαλονιού & υπνοδωματίων",
     description: "Μεταμορφώνουμε υπνοδωμάτια και σαλόνια με ατμόσφαιρα που αντικατοπτρίζει το στυλ σας.",
     href: "/services/anakainisi-salonou-ypnodomatio",
   },
   {
-    icon: CubeIcon,
+    icon: "https://cdn.discordapp.com/attachments/773533251867377684/1419456300064047214/image.png?ex=68d1d332&is=68d081b2&hm=5f21974a2e7d319d02acd3837fac76f36e117637f5978992fe072c2ea641865a",
     title: "Ελαιοχρωματισμοί & Βαψίματα",
     description: "Φρέσκα χρώματα και άψογο φινίρισμα που ανανεώνουν τον χώρο σας.",
     href: "/services/elaiochromatismoi-bapsimata",
   },
   {
-    icon: BoltIcon,
+    icon: "https://cdn.discordapp.com/attachments/773533251867377684/1419456354174631996/image.png?ex=68d1d33f&is=68d081bf&hm=33020577b33b02fb75e46837d31d8f0299a671c3f74d87034fb7fe7990cd76c3",
     title: "Γυψοσανίδες & ψευδοροφές",
     description: "Σύγχρονες λύσεις για διαμόρφωση και αισθητική αναβάθμιση κάθε χώρου.",
     href: "/services/gypso-sanides-psedro-rofes",
   },
   {
-    icon: CogIcon,
+    icon: "https://cdn.discordapp.com/attachments/773533251867377684/1419456404489769180/image.png?ex=68d1d34b&is=68d081cb&hm=3009166fbaf42eba765d13fcc8aa2ed0b748489f163458c64e843702b80453c4",
     title: "Πλακάκια & Πατώματα",
     description: "Ανθεκτικά υλικά και άψογη τοποθέτηση για όμορφα και λειτουργικά πατώματα.",
     href: "/services/plakakia-patoma",
@@ -74,7 +65,11 @@ export function Skills() {
             >
               {/* Professional Icon */}
               <div className="professional-icon mb-4 mx-auto w-fit">
-                <service.icon className="w-6 h-6 text-white" />
+                <img 
+                  src={service.icon} 
+                  alt={service.title}
+                  className="w-6 h-6 object-contain filter brightness-0 invert"
+                />
               </div>
               
               {/* Professional Content */}
