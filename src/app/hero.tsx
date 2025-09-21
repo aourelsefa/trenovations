@@ -21,13 +21,6 @@ function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center text-white px-8 max-w-4xl mx-auto">
-        {/* Professional Badge */}
-        <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-md mb-8">
-          <span className="text-sm font-medium">
-            600+ Ευχαριστιμένοι Πελάτες
-          </span>
-        </div>
-
         {/* Professional Main Heading */}
         <h1 className="text-4xl lg:text-6xl font-semibold mb-6 leading-tight">
           Δώσε Νέα Ζωή

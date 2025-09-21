@@ -14,31 +14,37 @@ const SERVICES = [
     icon: HomeIcon,
     title: "Ανακαίνιση κουζίνας",
     description: "Δώστε νέα ζωή στην κουζίνα σας με μοντέρνες λύσεις που συνδυάζουν στυλ και πρακτικότητα.",
+    href: "/services/anakainisi-kouzinas",
   },
   {
     icon: WrenchScrewdriverIcon,
     title: "Ανακαίνιση μπάνιου",
     description: "Ανανεώστε το μπάνιο σας με σύγχρονο σχεδιασμό, εργονομία και υψηλής ποιότητας υλικά.",
+    href: "/services/anakainisi-mpaniou",
   },
   {
     icon: PaintBrushIcon,
     title: "Ανακαίνιση σαλονιού & υπνοδωματίων",
     description: "Μεταμορφώνουμε υπνοδωμάτια και σαλόνια με ατμόσφαιρα που αντικατοπτρίζει το στυλ σας.",
+    href: "/services/anakainisi-salonou-ypnodomatio",
   },
   {
     icon: CubeIcon,
     title: "Ελαιοχρωματισμοί & Βαψίματα",
     description: "Φρέσκα χρώματα και άψογο φινίρισμα που ανανεώνουν τον χώρο σας.",
+    href: "/services/elaiochromatismoi-bapsimata",
   },
   {
     icon: BoltIcon,
     title: "Γυψοσανίδες & ψευδοροφές",
     description: "Σύγχρονες λύσεις για διαμόρφωση και αισθητική αναβάθμιση κάθε χώρου.",
+    href: "/services/gypso-sanides-psedro-rofes",
   },
   {
     icon: CogIcon,
     title: "Πλακάκια & Πατώματα",
     description: "Ανθεκτικά υλικά και άψογη τοποθέτηση για όμορφα και λειτουργικά πατώματα.",
+    href: "/services/plakakia-patoma",
   },
 ];
 
@@ -61,9 +67,10 @@ export function Skills() {
         {/* Professional Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {SERVICES.map((service, index) => (
-            <div
+            <a
               key={index}
-              className="professional-card p-6 text-center"
+              href={service.href}
+              className="professional-card p-6 text-center hover:scale-105 transition-transform duration-200 cursor-pointer"
             >
               {/* Professional Icon */}
               <div className="professional-icon mb-4 mx-auto w-fit">
@@ -78,7 +85,7 @@ export function Skills() {
               <p className="text-gray-600 leading-relaxed text-sm">
                 {service.description}
               </p>
-            </div>
+            </a>
           ))}
         </div>
 
@@ -87,9 +94,9 @@ export function Skills() {
           <p className="text-base text-gray-600 mb-4">
             Έτοιμοι να ξεκινήσουμε το επόμενο έργο σας;
           </p>
-          <button className="professional-button text-white px-6 py-3 text-base">
+          <a href="#contact" className="professional-button text-white px-6 py-3 text-base inline-block">
             Επικοινωνήστε μαζί μας
-          </button>
+          </a>
         </div>
       </div>
     </section>
