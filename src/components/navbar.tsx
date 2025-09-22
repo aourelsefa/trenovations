@@ -119,18 +119,18 @@ export function Navbar() {
               <div className="flex items-center gap-6">
                 {/* Contact Info */}
                 <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-2">
+                  <a href="tel:+306980703882" className="flex items-center gap-2 hover:text-[#003d7a] transition-colors">
                     <PhoneIcon className="w-4 h-4 text-[#001f3f]" />
                     <span className="text-sm text-[#001f3f] font-medium">
                       6980703882
                     </span>
-                  </div>
-                  <div className="flex items-center gap-2">
+                  </a>
+                  <a href="mailto:info@trenovations.gr" className="flex items-center gap-2 hover:text-[#003d7a] transition-colors">
                     <EnvelopeIcon className="w-4 h-4 text-[#001f3f]" />
                     <span className="text-sm text-[#001f3f] font-medium">
                       info@trenovations.gr
                     </span>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -166,18 +166,18 @@ export function Navbar() {
         <div className="container mx-auto px-4 py-4 bg-[#fefdf2]/95 backdrop-blur-md">
           {/* Mobile Contact Info */}
           <div className="flex flex-col gap-3 mb-4">
-            <div className="flex items-center gap-2">
+            <a href="tel:+306980703882" className="flex items-center gap-2 hover:text-[#003d7a] transition-colors">
               <PhoneIcon className="w-4 h-4 text-[#001f3f]" />
               <span className="text-sm text-[#001f3f] font-medium">
                 6980703882
               </span>
-            </div>
-            <div className="flex items-center gap-2">
+            </a>
+            <a href="mailto:info@trenovations.gr" className="flex items-center gap-2 hover:text-[#003d7a] transition-colors">
               <EnvelopeIcon className="w-4 h-4 text-[#001f3f]" />
               <span className="text-sm text-[#001f3f] font-medium">
                 info@trenovations.gr
               </span>
-            </div>
+            </a>
           </div>
           
           {/* Mobile Menu Items */}

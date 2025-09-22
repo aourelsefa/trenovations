@@ -6,10 +6,14 @@ import {
   EnvelopeIcon,
   ChatBubbleLeftRightIcon,
   XMarkIcon
-} from "@heroicons/react/24/outline";
+} from "@heroicons/react/24/solid";
 
 export function FloatingContact() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   const contactOptions = [
     {
@@ -89,12 +93,13 @@ export function FloatingContact() {
 
       {/* Main Floating Button */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
-        className={`w-14 h-14 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center ${
+        onClick={toggleMenu}
+        className={`w-14 h-14 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center cursor-pointer border-2 border-white ${
           isOpen 
-            ? 'bg-red-600 hover:bg-red-700 rotate-45' 
+            ? 'bg-red-600 hover:bg-red-700' 
             : 'bg-[#001f3f] hover:bg-[#001f3f]/90'
         }`}
+        style={{ zIndex: 9999 }}
       >
         {isOpen ? (
           <XMarkIcon className="w-6 h-6 text-white" />

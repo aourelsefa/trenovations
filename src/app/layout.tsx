@@ -178,6 +178,10 @@ export default function RootLayout({
               src="https://api.nepcha.com/js/nepcha-analytics.js"
             ></script>
             <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+            <link rel="icon" href="/favicon.png" type="image/png" />
+            <link rel="apple-touch-icon" href="/favicon.png" />
+            <link rel="icon" sizes="32x32" href="/favicon.png" />
+            <link rel="icon" sizes="16x16" href="/favicon.png" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
             <meta name="theme-color" content="#001f3f" />
             <meta name="msapplication-TileColor" content="#001f3f" />
